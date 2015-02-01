@@ -13,9 +13,15 @@ ShoppingListItem.prototype.check = function() {
 };
 
 ShoppingListItem.prototype.uncheck  = function() {
-
+  this.is_done = false;
 };
 
 ShoppingListItem.prototype.render = function() {
-
+// use single quotes for your js and use double where  html need them  class=""
+ var some_html_output = 
+  '<li class="completed_false"> \
+    <span>Avocado</span> \
+    <span>Must be eaten immediately.</span> \
+  </li>';
+  return some_html_output;
 };
