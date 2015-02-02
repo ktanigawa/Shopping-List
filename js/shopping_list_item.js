@@ -19,9 +19,13 @@ ShoppingListItem.prototype.uncheck  = function() {
 ShoppingListItem.prototype.render = function() {
 // use single quotes for your js and use double where  html need them  class=""
  var some_html_output = 
-  '<li class="completed_false"> \
-    <span>Avocado</span> \
-    <span>Must be eaten immediately.</span> \
-  </li>';
+    '<li class="completed_'+this.is_done+'"> \
+      <span>'+this.name+'</span> \
+      <span>'+this.description+'</span> \
+    </li>';
   return some_html_output;
 };
+
+// var cereal = new ShoppingListItem("cereal", "Lucky Charms");
+// console.log(cereal.render());
+  
